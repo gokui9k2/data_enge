@@ -92,7 +92,7 @@ L'inclusion des modifications dans le spider, et plus encore l'amélioration de 
 
 En espérant vous avoir communiqué notre passion pour les arts martiaux ! Merci pour votre lecture !
 
-![Texte alternatif](https://i.imgur.com/IhGw1eJ.png)
+![Texte alternatif]("image rapport/architecture.png")
 
 
 
