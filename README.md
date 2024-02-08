@@ -13,7 +13,7 @@ FrameWork : Dash plotly, MongoDB, Elasticsearch
 IDE recommandé : Vscode, Docker 
 
 ## 	Architecture du code 
-![Texte alternatif](https://i.imgur.com/8bz6BDV.png)
+![Texte alternatif](image_rapport/architecture.png)
 
 
 ## Qu'est-ce que l'UFC ?
@@ -31,11 +31,11 @@ Pour ce projet, nous avons décidé de scraper le site de l'UFC car nous sommes 
 Nous avons commencé par scraper les données des combattants, c'est-à-dire toutes leurs caractéristiques. Pour cela, nous avons utilisé le code suivant :
 
 - Photo du code Scrapy 1:
-![Texte alternatif](https://i.imgur.com/szgpfMB.png)
+![Texte alternatif](image_rapport/scrapyf.png)
 
 Ensuite, nous avons effectué un deuxième scrapy afin de récupérer les données des combattants.
 - Photo du code Scrapy 2 :
- ![Texte alternatif](https://i.imgur.com/sKQ50RP.png)
+ ![Texte alternatif](image_rapport/scrapyc.png)
 
 Dans ces scripts, nous parcourons plusieurs pages et scrap les données qui nous intéressent. Ensuite, nous procédons à un nettoyage des données pour les rendre plus lisibles et plus simples à analyser. À chaque appel récursif, nous intégrons les données dans notre base de données MongoDB, même si, après analyse, cette solution ne semble pas la plus adaptée en raison de sa complexité.
 
@@ -48,7 +48,7 @@ Pour améliorer notre script Scrapy, nous avons pris plusieurs mesures :
 
 Au final nous avions un code qui ressemble a cela comme nous n'avons pas eu le temps de l'intégrer dans notre projet nous avons décidé de mettre le fichier python dans le dossier vous pourrez le parcourir voici un aperçue:
 
-![Texte alternatif](https://i.imgur.com/QsUHL0u.png  )
+![Texte alternatif](image_rapport/scrapyup.png)
 
 Faute de temps, nous n'avons pas pu intégrer la version améliorée du script à notre projet en raison d'une petite erreur dans le code qui affectait le bulk, nous laissant avec un dataset de 7222 lignes et une colonne.
 
@@ -61,7 +61,7 @@ L'un des plus grands défis que nous avons rencontrés dans ce projet est la tra
 Le plus gros du travail a concerné le dataset sur les caractéristiques des combattants, qui était moins bien structuré. Beaucoup de valeurs manquantes étaient dues à une mauvaise documentation sur le site de l'UFC. 
 
 Voici a quoi cela pouvait ressembler:
-![Texte alternatif](https://i.imgur.com/ORHx341.png)
+![Texte alternatif](image_rapport/carac.png)
 
 On peut y voir des données manquantes réparties un peu partout. Pour gérer tout cela, nous avons d'abord créé une nouvelle variable `class` afin d'affiner notre nettoyage. De plus, grâce au premier dataset, une variable `gender` a été ajoutée pour plus de précision.
 
