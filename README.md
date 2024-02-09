@@ -16,6 +16,7 @@ IDE recommandé : Vscode, Docker
 ## 	Architecture du code 
 ![Texte alternatif](image_rapport/architecture.png)
 
+Nous avons décidé de ne pas mettre le fichier avec l'application Dash car elle n'est pas fonctionnelle.
 
 ## Qu'est-ce que l'UFC ?
 
@@ -82,6 +83,7 @@ https://docs.scrapy.org/en/latest/intro/tutorial.html
 https://dash.plotly.com/tutorial
 https://www.mongodb.com/languages/python
 https://dylancastillo.co/elasticsearch-python/
+https://community.plotly.com/t/how-do-i-access-plotly-dash-on-a-docker-container/57859/2
 
 
 
