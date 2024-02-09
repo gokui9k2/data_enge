@@ -71,9 +71,38 @@ Pour gérer les données manquantes sur la taille et l'allonge, nous avons rempl
 
 ### App Dash
 
+Analyse des Performances des Combattants UFC
+
+![Texte alternatif](image_rapport/poids.png)
+
+L'analyse montre que les combattants entre 25 et 30 ans tendent à infliger un pourcentage plus élevé de coups significatifs au corps, ce qui peut indiquer une agressivité accrue ou une technique plus raffinée dans cette tranche d'âge.
+
+![Texte alternatif](image_rapport/pos.png)
+
+Ici, il est intéressant de constater qu'il n'y a pas de corrélation claire entre la précision des frappes et la défense contre les frappes. Certains combattants ont une excellente précision sans nécessairement avoir une défense supérieure, ce qui pourrait suggérer des stratégies de combat orientées vers l'offensive.
+
+![Texte alternatif](image_rapport/def.png)
+
+La défense contre les takedowns semble être répartie uniformément à travers toutes les tailles de combattants. Cela suggère que la capacité de défense au sol n'est pas nécessairement influencée par la taille du combattant.
+
+![Texte alternatif](image_rapport/sig.png)
+
+Les combattants plus jeunes semblent passer plus de temps en position dominante au sol, ce qui pourrait refléter une meilleure condition physique ou des compétences plus développées en grappling chez les combattants plus jeunes.
+
+![Texte alternatif](image_rapport/taille.png)
+
+La majorité des combattants se situent dans les catégories de poids moyen, avec moins de combattants aux extrêmes légers ou lourds. Ceci est cohérent avec la répartition typique des poids dans la population générale.
+
+![Texte alternatif](image_rapport/sol.png)
+
+L'analyse montre que le temps de contrôle au sol ne varie pas considérablement avec l'âge des combattants. Cependant, une pointe notable est observée chez les combattants de 47 ans, ce qui pourrait être attribué à un échantillon de taille réduite pour cet âge ou à des compétences exceptionnelles de combattants spécifiques.
+
+Ces graphiques fournissent des insights précieux sur les tendances et les caractéristiques des combattants de l'UFC, utiles pour les fans, les analystes et les entraîneurs dans la compréhension des aspects stratégiques du combat.
 ### Docker 
 
 Enfin, nous sommes passés à la conteneurisation de notre code, qui a été plus difficile que prévu. Nous avons utilisé un Docker Compose pour relier toutes les autres images que nous avons dû utiliser, telles que MongoDB, Elasticsearch, etc., que nous avons dû configurer sur différents ports. Nous avons été surpris de voir que nos codes Scrapy ont pris beaucoup plus de temps à s'exécuter, ce qui s'explique par une allocation différente de puissance. Nous avons donc augmenté la puissance allouée à notre conteneur. Après cela, nous avons écrit les différents Dockerfile dans tous les fichiers où cela était nécessaire.
+
+Malheureusement, nous n'avons pas réussi à tout conteneuriser car nous avons eu un souci au niveau de l'orchestration. Tout se passe bien, mais lorsque nous lançons l'app, elle se lance en seconde place et se ferme juste après. Nous ne pouvons donc pas accéder à notre dashboard. Une solution à cela serait d'implémenter un fichier `entrypoint.sh`, mais lorsque nous le faisons, cela fait crasher nos ordinateurs... C'est pourquoi nous avons décidé de vous présenter le scrapy et le dash dans deux dossiers différents, malheureusement. Cela nous attriste et nous ne considérons pas notre travail fini. Nous le finaliserons au cours de l'année, même si cela ne comptera pas pour la note finale.
 
 ### Copyright 
 
