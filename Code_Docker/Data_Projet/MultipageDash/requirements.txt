@@ -1,0 +1,14 @@
+scrapy
+pymongo
+pandas
+numpy
+geopy
+regex
+scikit-learn
+dash==2.14.1
+plotly
+dash-bootstrap-components
+elasticsearch
+werkzeug==1.0.1
+MarkupSafe==1.1.1
+gunicorn
